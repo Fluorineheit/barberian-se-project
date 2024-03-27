@@ -5,7 +5,11 @@ export default {
   ],
   important: "#root",
   theme: {
-    extend: {},
+    extend: { 
+      fontFamily: {
+        'poppins': ['Poppins'],
+      },
+    },
   },
   plugins: [],
 }
