@@ -11,15 +11,14 @@ import {
   } from "@mui/material";
   import { Email, Visibility, Person, Phone } from "@mui/icons-material/";
   import { useNavigate } from "react-router-dom";
-
   
   export default function Login() {
     const navigate = useNavigate();
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <Card variant="outlined" className="p-3 w-80 h-[95vh] rounded-xl">
+        <Card variant="outlined" className="p-3 my-5 w-[90%] rounded-xl shadow-lg">
           <CardContent>
-            <Typography variant="h4" gutterBottom>
+            <Typography className="mb-0" variant="h4" gutterBottom>
               Register
             </Typography>
           </CardContent>

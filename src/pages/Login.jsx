@@ -14,7 +14,7 @@ export default function Login() {
   const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <Card variant="outlined" className="p-3 w-80 h-auto rounded-xl">
+      <Card variant="outlined" className="p-3 w-[90%] rounded-xl shadow-lg">
         <CardContent>
           <Typography variant="h4" gutterBottom>
             Login
@@ -47,14 +47,14 @@ export default function Login() {
             }}
             variant="outlined"
           />
-          <Button variant="contained" className="bg-[#797EF6] px-10 rounded-xl">
+          <Button onClick={()=>{navigate("/home")}} variant="contained" className="bg-[#797EF6] px-10 rounded-xl">
             Login
           </Button>
           <Button onClick={()=>{navigate('/register')}} variant="text" className="px-10 rounded-xl capitalize">
             sign up
           </Button>
           <div className="border-t-2 border-gray-600"></div>
-          <Button variant="text" className="capitalize text-gray-500 px-10 rounded-xl">
+          <Button onClick={()=>{navigate('/forgot-password')}} variant="text" className="capitalize text-gray-500 px-10 rounded-xl">
             forget password
           </Button>
         </CardActions>
