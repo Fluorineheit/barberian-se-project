@@ -9,3 +9,7 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #f5f5f5;
 }
+
+.container {
+    @apply flex flex-col p-4 pb-20 min-h-screen bg-[#ECECF3] gap-4;
+}

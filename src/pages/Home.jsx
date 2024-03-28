@@ -4,8 +4,8 @@ import { ImageList, ImageListItem } from "@mui/material";
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-4 pb-20 min-h-screen bg-[#ECECF3]">
-      <p className="text-4xl font-semibold mb-4">Hai user</p>
+    <div className="container">
+      <p className="text-3xl font-semibold mb-4">Hai user</p>
       <p>
         You look so good today, but we'll make it even cooler! What do you want
         to do?
