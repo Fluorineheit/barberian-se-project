@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Home from './pages/Home';
 import SearchPage from './pages/SearchPage';
+import OrderPage from './pages/OrderPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/forgot-password' element={<ForgotPassword />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/search' element={<SearchPage />}></Route>
+        <Route path='/order' element={<OrderPage />}></Route>
       </Routes>
     </Router>
     </>

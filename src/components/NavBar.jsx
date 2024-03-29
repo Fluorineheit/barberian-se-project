@@ -58,12 +58,19 @@ export default function NavBar() {
         </Button>
         <Button
           type="button"
+          onClick={() => navigate("/order")}
           className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
         >
-          <List className="w-6 h-6 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" />
-          <p className="font-normal text-sm capitalize text-gray-500 group-hover:text-blue-600 ">
-            Order
-          </p>
+          <div
+            style={{
+              color: currentLocation.pathname === "/order" ? "#2563EB" : "gray",
+            }}
+          >
+            <List className="w-6 h-6 mb-2 " />
+            <p className="font-normal text-sm capitalize ">
+              Order
+            </p>
+          </div>
         </Button>
         <Button
           type="button"
