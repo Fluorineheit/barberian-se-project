@@ -970,3 +970,45 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+
+#root :is(.group:hover .group-hover\:text-blue-600) {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  #root :is(.dark\:text-gray-400) {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  #root :is(.dark\:hover\:bg-gray-800:hover) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
+  #root :is(.group:hover .dark\:group-hover\:text-blue-500) {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity));
+  }
+  .servicesimg2{
+    border-radius: 33px 33px 0px 33px;
+    box-shadow: -7px 7px 10px -5px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 152px;
+    height: 152px;
+    padding: 0 20px;
+  }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 9px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+}
