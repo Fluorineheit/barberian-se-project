@@ -10,38 +10,38 @@ const ServicePage = () => {
     <div className="container">
       <p className="text-3xl font-semibold">Services</p>
       <div className="subTitle">For women</div>
-      <div class="services-container">
-        <div class="servicesimg2">
+      <div className="services-container">
+        <div className="servicesimg2">
           <img src={haircare} className="img" />
-          <div class="subTitle">Hair Care</div>
+          <div className="subTitle">Hair Care</div>
         </div>
-        <div class="servicesimg2">
+        <div className="servicesimg2">
           <img src={hairwash} className="img" />
-          <div class="div-7">Hair Washing</div>
+          <div className="div-7">Hair Washing</div>
         </div>
-        <div class="servicesimg2">
+        <div className="servicesimg2">
           <img src={haircut} className="img" />
-          <div class="div-7">Hair Cut</div>
+          <div className="div-7">Hair Cut</div>
         </div>
-        <div class="servicesimg2">
+        <div className="servicesimg2">
           <img src={hairstyle} className="img" />
-          <div class="div-7">Hair Styling</div>
+          <div className="div-7">Hair Styling</div>
         </div>
       </div>
 
       <div className="subTitle mt-4">For men</div>
-      <div class="services-container">
-        <div class="servicesimg2">
+      <div className="services-container">
+        <div className="servicesimg2">
           <img src={haircare} className="img" />
-          <div class="subTitle">Hair Care</div>
+          <div className="subTitle">Hair Care</div>
         </div>
-        <div class="servicesimg2">
+        <div className="servicesimg2">
           <img src={hairwash} className="img" />
-          <div class="div-7">Hair Washing</div>
+          <div className="div-7">Hair Washing</div>
         </div>
-        <div class="servicesimg2">
+        <div className="servicesimg2">
           <img src={haircut} className="img" />
-          <div class="div-7">Hair Cut</div>
+          <div className="div-7">Hair Cut</div>
         </div>
       </div>
 
