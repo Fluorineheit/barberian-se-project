@@ -13,3 +13,24 @@ body {
 .container {
     @apply flex flex-col p-4 pb-20 min-h-screen bg-[#ECECF3] gap-4;
 }
+
+.servicesimg2{
+    border-radius: 33px 33px 0px 33px;
+    box-shadow: -7px 7px 10px -5px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 152px;
+    height: 152px;
+    padding: 0 20px;
+  }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 9px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
