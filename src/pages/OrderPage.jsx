@@ -5,7 +5,7 @@ import { LocationOn } from "@mui/icons-material/";
 export default function OrderPage() {
   return (
     <div className="container">
-      <p className="text-3xl font-semibold">Appointment List</p>
+      <p className="text-3xl font-semibold">Order List</p>
 
       <div className="bg-white grid grid-flow-row p-4">
         <p className="text-md font-semibold">Today</p>

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import SearchPage from './pages/SearchPage';
 import OrderPage from './pages/OrderPage';
 import Choice from './pages/ChoicePage';
+import Profile from './pages/Profile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/order' element={<OrderPage />}></Route>
         <Route path='/services' element={<ServicePage />}></Route>
         <Route path='/choice' element={<Choice />}></Route>
+        <Route path='/profile' element={<Profile/>}></Route>
       </Routes>
     </Router>
     </>
