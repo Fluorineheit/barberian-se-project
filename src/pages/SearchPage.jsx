@@ -5,14 +5,19 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import BarberLogo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+
+
 
 // delete nanti cuma buat test aja
 const barberImg =
   "https://asset.kompas.com/crops/V6ViT5zjwooMiYHjl922Cl5FMOM=/0x0:0x0/750x500/data/photo/2022/06/29/62bc3c5f26d8d.jpg";
 
 export default function SearchPage() {
+ const navigate = useNavigate();
+
   return (
-    <div className="container">
+    <div className="container m-0">
       <p className="text-3xl font-semibold">Search</p>
       <TextField
         id="input-with-icon-password"
@@ -32,7 +37,7 @@ export default function SearchPage() {
         {Array(6)
           .fill(0)
           .map((_, idx) => (
-            <Card key={idx} variant="outlined" className="rounded-xl">
+            <Card key={idx} variant="outlined" className="rounded-xl" onClick={()=>{navigate("/choice")}}>
               <CardContent className="p-0">
                 <img src={barberImg} />
                 <div className="mt-1 p-2">
