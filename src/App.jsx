@@ -5,6 +5,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import Home from './pages/Home';
 import SearchPage from './pages/SearchPage';
 import OrderPage from './pages/OrderPage';
+import Choice from './pages/ChoicePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/search' element={<SearchPage />}></Route>
         <Route path='/order' element={<OrderPage />}></Route>
+        <Route path='/choice' element={<Choice />}></Route>
       </Routes>
     </Router>
     </>
