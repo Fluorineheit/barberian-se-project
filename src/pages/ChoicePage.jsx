@@ -6,7 +6,7 @@ const barberImg =
   "https://asset.kompas.com/crops/V6ViT5zjwooMiYHjl922Cl5FMOM=/0x0:0x0/750x500/data/photo/2022/06/29/62bc3c5f26d8d.jpg";
 
 export default function ChoicePage() {
-  const back = useNavigate();
+  const navigate = useNavigate();
 
   {
     return (
@@ -15,7 +15,7 @@ export default function ChoicePage() {
           <Button
             className=""
             onClick={() => {
-              back(-1);
+              navigate(-1);
             }}
           >
             <ArrowBackIos />
@@ -33,7 +33,7 @@ export default function ChoicePage() {
           <div className="flex flex-col gap-4 mt-4">
             <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Products</Button>
             <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Schedule a visit</Button>
-            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Reviews</Button>
+            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case" onClick={()=>{navigate('/reviews')}}>Reviews</Button>
             <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Map Location</Button>
           </div>
         </div>

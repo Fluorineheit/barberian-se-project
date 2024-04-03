@@ -10,9 +10,8 @@ export default function Profile() {
     return (
         <div className="container pb-2">
         <div className="flex flex-row items-center">
-          <p className="text-xl font-semibold text-center">Profile</p>
+          <p className="text-3xl font-semibold text-center">Profile</p>
         </div>
-
         <div className="bg-white grid grid-flow-row p-4 rounded-md gap-4">
             <div className="flex flex-row items-center">
                 <img src={profileImage} alt="user profile image"  className="scale-100 object-cover rounded-full w-[80px] h-[80px] mr-4"/>
@@ -20,7 +19,7 @@ export default function Profile() {
                     Yvette Young
                 </p>
             </div>
-            <Stack>
+            <Stack spacing={2}>
                 <Button startIcon={<Person />} variant="text" className="justify-start rounded-xl text-black normal-case" >Manage Account</Button>
                 <Button startIcon={<Lock />} variant="text" className="justify-start rounded-xl text-black normal-case" >Privacy</Button>
                 <Button startIcon={<Favorite />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Favorite</Button>

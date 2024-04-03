@@ -7,6 +7,7 @@ import SearchPage from './pages/SearchPage';
 import OrderPage from './pages/OrderPage';
 import Choice from './pages/ChoicePage';
 import Profile from './pages/Profile';
+import Reviews from './pages/Reviews';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/services' element={<ServicePage />}></Route>
         <Route path='/choice' element={<Choice />}></Route>
         <Route path='/profile' element={<Profile/>}></Route>
+        <Route path='/reviews' element={<Reviews/>}/>
       </Routes>
     </Router>
     </>
