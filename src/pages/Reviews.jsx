@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Reviews() {
   const back = useNavigate();
+  
   return (
     <div className="container pb-2">
         <div className="flex flex-row">

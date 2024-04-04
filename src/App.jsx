@@ -8,6 +8,8 @@ import OrderPage from './pages/OrderPage';
 import Choice from './pages/ChoicePage';
 import Profile from './pages/Profile';
 import Reviews from './pages/Reviews';
+import Maps from './pages/Maps';
+import Products from './pages/Products';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 
@@ -27,6 +29,8 @@ function App() {
         <Route path='/choice' element={<Choice />}></Route>
         <Route path='/profile' element={<Profile/>}></Route>
         <Route path='/reviews' element={<Reviews/>}/>
+        <Route path='/maps' element={<Maps/>}></Route>
+        <Route path='/products' element={<Products />}></Route>
       </Routes>
     </Router>
     </>

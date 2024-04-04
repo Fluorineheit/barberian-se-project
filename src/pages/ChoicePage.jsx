@@ -31,10 +31,10 @@ export default function ChoicePage() {
             illum animi.
           </p>
           <div className="flex flex-col gap-4 mt-4">
-            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Products</Button>
+            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case" onClick={()=>{navigate('/products')}}>Products</Button>
             <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Schedule a visit</Button>
             <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case" onClick={()=>{navigate('/reviews')}}>Reviews</Button>
-            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case">Map Location</Button>
+            <Button variant="contained" className="rounded-xl bg-[#797EF6] text-white normal-case" onClick={()=>{navigate('/maps')}}>Map Location</Button>
           </div>
         </div>
         
