@@ -12,6 +12,7 @@ import Maps from './pages/Maps';
 import Products from './pages/Products';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
+import Schedule from './pages/Schedule';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/reviews' element={<Reviews/>}/>
         <Route path='/maps' element={<Maps/>}></Route>
         <Route path='/products' element={<Products />}></Route>
+        <Route path='/schedule' element={<Schedule/>}></Route>
       </Routes>
     </Router>
     </>
