@@ -1,5 +1,5 @@
 import { ArrowBackIos } from "@mui/icons-material";
-import { Button, Card, CardContent, CardMedia, Typography } from "@mui/material/";
+import { Button, Card, CardContent, CardMedia, Typography  } from "@mui/material/";
 import { useNavigate } from "react-router-dom";
 
 export default function Products() {

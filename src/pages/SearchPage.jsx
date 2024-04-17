@@ -1,17 +1,57 @@
 import NavBar from "../components/NavBar";
 import { TextField, InputAdornment } from "@mui/material";
-import { Search, Star } from "@mui/icons-material/";
+import { Description, Search, Star } from "@mui/icons-material/";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import BarberLogo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
 
+const shopImage = [
+  {
+    img: "src/assets/shop_1.png",
+    title: "The Classic Cut",
+    distance: "0.2 km",
+    rating: "4.8",
+    description: "Kembali ke masa lalu di The Classic Cut. Tukang cukur kami yang berpengalaman berspesialisasi dalam potongan rambut tradisional pria, menawarkan hasil pudar yang tajam, pencukuran yang bersih, dan suasana yang bersahabat. Selamat datang!"
+  },
+  {
+    img: "src/assets/shop_2.png",
+    title: "The Modern Man",
+    distance: "0.2 km",
+    rating: "4.9",
+    description: "Mencari potongan rambut modern? The Modern Man melayani trendsetter. Kami menawarkan berbagai pilihan potongan rambut dan gaya, termasuk pembentukan janggut, tato rambut, dan layanan pewarnaan. Pesan janji temu Anda secara online untuk pengalaman yang lancar."
+  },
+  {
+    img: "src/assets/shop_3.png",
+    title: "Rusdi Ngawi Barbarshop",
+    distance: "0.2 km",
+    rating: "4.6",
+    description: "Ayah dan anak, bersatu! Rusdi ngawi Barbarshop menyediakan lingkungan yang nyaman bagi segala usia untuk potong rambut. Tukang cukur kami sabar dan terampil, memastikan potongan sempurna untuk setiap anggota keluarga. Nikmati potong rambut gratis untuk anak di bawah 5 tahun.",
+  },
+  {
+    img: "src/assets/shop_4.png",
+    title: "Salon Ania",
+    distance: "0.3 km",
+    rating: "4.3",
+    description: "Biarkan rambut Anda menjadi bintang pertunjukan di Salon Ania. Penata rambut kami ahli dalam koreksi warna, ekstensi, dan segala hal yang berhubungan dengan kesehatan rambut. Bersantailah di salon mewah kami dan tinggalkan perasaan percaya diri dan cantik."
+  },
+  {
+    img: "src/assets/shop_5.png",
+    title: "Nyalon Salon",
+    distance: "0.8 km",
+    rating: "4.2",
+    description: "Acara khusus akan datang? Nyalon Salon berspesialisasi dalam pembaruan, kepang, dan gaya rambut formal yang menakjubkan. Baik itu pernikahan, prom, atau keluar malam, stylist kami akan menciptakan tampilan yang menarik perhatian. Pesan konsultasi untuk mendiskusikan gaya rambut impian Anda."
+  },
+  {
+    img: "src/assets/shop_6.png",
+    title: "Mos Eisley",
+    distance: "1.2 km",
+    rating: "3.9",
+    description: "Rangkul kecantikan alami Anda di Mos Eisley. Penata rambut kami berspesialisasi dalam menangani semua jenis dan tekstur rambut. Kami menawarkan berbagai perawatan dan layanan untuk mempercantik ikal, gulungan, atau gelombang alami Anda. Jadwalkan konsultasi untuk menciptakan rutinitas perawatan rambut yang dipersonalisasi."
+  },
+]
 
-// delete nanti cuma buat test aja
-const barberImg =
-  "https://asset.kompas.com/crops/V6ViT5zjwooMiYHjl922Cl5FMOM=/0x0:0x0/750x500/data/photo/2022/06/29/62bc3c5f26d8d.jpg";
 
 export default function SearchPage() {
  const navigate = useNavigate();
@@ -34,21 +74,20 @@ export default function SearchPage() {
         variant="outlined"
       />
       <div className="grid grid-cols-2 gap-2 ">
-        {Array(6)
-          .fill(0)
-          .map((_, idx) => (
-            <Card key={idx} variant="outlined" className="rounded-xl" onClick={()=>{navigate("/choice")}}>
+        {shopImage
+          .map(item => (
+            <Card key={item.img} variant="outlined" className="rounded-xl" onClick={()=>{navigate("/choice", {state: {item}})}}>
               <CardContent className="p-0">
-                <img src={barberImg} />
+                <img src={item.img} />
                 <div className="mt-1 p-2">
                   <Typography className="font-semibold" gutterBottom>
-                    barbaer soup
+                    {item.title}
                   </Typography>
                   <div className="grid grid-flow-col text-sm">
-                    <div>0.2 km</div>
+                    <div>{item.distance}</div>
                     <div className="flex flex-row-reverse">
                       <Star className="text-yellow-500 text-[16px]" />
-                      <p>4.8</p>
+                      <p>{item.rating}</p>
                     </div>
                   </div>
                 </div>
@@ -60,3 +99,5 @@ export default function SearchPage() {
     </div>
   );
 }
+
+
