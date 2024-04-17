@@ -11,7 +11,7 @@ export default function Landing() {
         <Button onClick={()=>navigate('/login')} variant="contained" className="bg-[#797EF6] px-20 rounded-xl">
           Login
         </Button>
-        <Button variant="text" className="text-black px-20 underline underline-offset-2">
+        <Button onClick={()=>navigate('/register')} variant="text" className="text-black px-20 underline underline-offset-2">
           sign up
         </Button>
       </div>

@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { ArrowBackIos } from "@mui/icons-material/";
-import { Button } from "@mui/material";
+import { Button, Stack, Fade } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
@@ -14,7 +14,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: '90vw',
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -69,14 +69,22 @@ export default function Maps() {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-      >
+        >
         <Box sx={style}>
-          <p id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <p id="modal-modal-title" component="h2" style={{marginBottom: '10px'}}>
+            Alert
           </p>
           <p id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            Do you want to open the coordinate in google maps?
           </p>
+          <Stack style={{marginTop: '10px'}} direction="row" spacing={2} justifyContent="center" >
+            <Button onClick={handleClose} variant="text" style={{color: 'black'}}>
+              Cancel
+            </Button>
+            <Button variant="contained" style={{backgroundColor: '#797EF6'}}>
+              Yes
+            </Button>
+        </Stack>
         </Box>
       </Modal>
     </div>

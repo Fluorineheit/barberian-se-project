@@ -11,11 +11,26 @@ export default function Home() {
         to do?
       </p>
 
+        <div
+          style={{ display: "flex", overflowX: "auto", whiteSpace: "nowrap", gap: "8px"}}
+        >
+          {adPicture.map((item) => (
+            <img
+              key={item.img}
+              srcSet={`${item.img}`}
+              src={`${item.img}`}
+              alt={item.title}
+              loading="lazy"
+              style={{ width: '300px', height:'130px',}}
+            />
+          ))}
+        </div>
+
       <div className="flex mt-4">
         <p className="text-xl font-semibold">Inspiration</p>
       </div>
 
-      <ImageList className="w-full h-full" variant="masonry" cols={3} gap={8}>
+      <ImageList className="w-full h-full" gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
@@ -33,53 +48,44 @@ export default function Home() {
   );
 }
 
+const adPicture = [
+  {
+    img: "src/assets/ad_1.png",
+    title: "ad 1"    
+  },
+  {
+    img: "src/assets/ad_2.png",
+    title: "ad 2"
+  },
+  {
+    img: "src/assets/ad_3.png",
+    title: "ad 3"
+  }
+]
+
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
-    title: "Bed",
+    img: "src/assets/model_fem_1.png",
+    title: "model female 1",
   },
   {
-    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
-    title: "Books",
+    img: "src/assets/model_fem_2.png",
+    title: "model female  2",
   },
   {
-    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
-    title: "Sink",
+    img: "src/assets/model_fem_3.png",
+    title: "model female 3",
   },
   {
-    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-    title: "Kitchen",
+    img: "src/assets/model_male_1.png",
+    title: "model male 1",
   },
   {
-    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
-    title: "Blinds",
+    img: "src/assets/model_male_2.png",
+    title: "model male 2",
   },
   {
-    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
-    title: "Chairs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
-    title: "Laptop",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
-    title: "Doors",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
-    title: "Coffee",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
-    title: "Storage",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
-    title: "Candle",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
-    title: "Coffee table",
+    img: "src/assets/model_male_3.png",
+    title: "model male 3",
   },
 ];
