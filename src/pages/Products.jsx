@@ -1,9 +1,11 @@
 import { ArrowBackIos } from "@mui/icons-material";
 import { Button, Card, CardContent, CardMedia, Typography  } from "@mui/material/";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Products() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const item = location.state.item.products;
   const barberImg =
     "https://asset.kompas.com/crops/V6ViT5zjwooMiYHjl922Cl5FMOM=/0x0:0x0/750x500/data/photo/2022/06/29/62bc3c5f26d8d.jpg";
 
@@ -17,20 +19,19 @@ export default function Products() {
       </div>
 
       <div className="grid grid-cols-2 rounded-md gap-4">
-        {Array(4).fill(0).map((_, idx) => (<Card key={idx}>
+        {item.map((it) => (<Card key={it.img}>
             <CardContent className="p-0">
-                <CardMedia component="img"  image={barberImg} alt="barber" className="p-0" />
+                <CardMedia component="img" image={it.img} alt="barber" className="p-0" />
                 <div className="flex flex-col gap-2 p-3">
                     <Typography className="text-sm font-semibold">
-                    Barbatos Shaving Cream 200oz
+                    {it.title}
                     </Typography>
                     <Typography variant="caption" className="text-sm">
-                        Rp. 100.000
+                        Rp. {it.price}
                     </Typography>
                 </div>
             </CardContent>
         </Card>))}
-        
       </div>
     </div>
   );

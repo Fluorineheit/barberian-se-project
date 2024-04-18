@@ -24,6 +24,7 @@ export default function Login() {
           <TextField
             id="input-with-icon-textfield"
             label="Email"
+            type="email"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
