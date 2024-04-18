@@ -19,7 +19,7 @@ export default function ChoicePage() {
           >
             <ArrowBackIos />
           </Button>
-          <p className="text-xl font-semibold text-center">Barbaer Soup</p>
+          <p className="text-xl font-semibold text-center">{item.title}</p>
         </div>
 
         <div className="bg-white grid grid-flow-row p-4 rounded-md gap-4">

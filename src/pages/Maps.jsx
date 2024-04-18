@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import { ArrowBackIos } from "@mui/icons-material/";
 import { Button, Stack, Fade } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -22,12 +22,30 @@ const style = {
   };
 
 export default function Maps() {
-  const position = [-6.6036887674002385, 106.65770556625411];
+  
+  const position = [-6.603731380944771, 106.65773772478984];
   const back = useNavigate();
-
+  
   const [open, setOpen] = useState(false);
+  const [mapPosition, setMapPosition] = useState(position);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const MapEvents = () => {
+    const map = useMapEvents({
+      click: (e) => {
+        setMapPosition([e.latlng.lat, e.latlng.lng]);
+      },
+    });
+
+    return null;
+  };
+
+  const handleClick = () => {
+    const [ lat, lng ] = mapPosition
+    window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`)
+  }
 
   return (
     <div className="container">
@@ -55,6 +73,7 @@ export default function Maps() {
         <Marker position={position}>
           <Popup>Lokasi.</Popup>
         </Marker>
+        <MapEvents />
       </MapContainer>
       <Button
         variant="contained"
@@ -81,7 +100,7 @@ export default function Maps() {
             <Button onClick={handleClose} variant="text" style={{color: 'black'}}>
               Cancel
             </Button>
-            <Button variant="contained" style={{backgroundColor: '#797EF6'}}>
+            <Button onClick={handleClick} variant="contained" style={{backgroundColor: '#797EF6'}}>
               Yes
             </Button>
         </Stack>
