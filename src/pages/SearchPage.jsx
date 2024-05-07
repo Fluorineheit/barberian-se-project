@@ -100,15 +100,18 @@ const shopImage = [
     products: [
       {
         img: product_1,
-        title: "Pomade",
+        title: "Shampoo",
+        price: "100.000"
       },
       {
         img: product_2,
-        title: "Shampoo",
+        title: "Pomade",
+        price: "250.000"
       },
       {
         img: product_3,
         title: "Conditioner",
+        price: "90.000"
       },
     ]
   },
@@ -121,15 +124,18 @@ const shopImage = [
     products: [
       {
         img: product_1,
-        title: "Pomade",
+        title: "Shampoo",
+        price: "100.000"
       },
       {
         img: product_2,
-        title: "Shampoo",
+        title: "Pomade",
+        price: "250.000"
       },
       {
         img: product_3,
         title: "Conditioner",
+        price: "90.000"
       },
     ]
   },
@@ -142,15 +148,18 @@ const shopImage = [
     products: [
       {
         img: product_1,
-        title: "Pomade",
+        title: "Shampoo",
+        price: "100.000"
       },
       {
         img: product_2,
-        title: "Shampoo",
+        title: "Pomade",
+        price: "250.000"
       },
       {
         img: product_3,
         title: "Conditioner",
+        price: "90.000"
       },
     ]
   },

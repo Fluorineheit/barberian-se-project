@@ -26,7 +26,7 @@ export default function Reviews() {
         {Array(6)
           .fill(0)
           .map((_, idx) => (
-            <Card key={idx} variant="outlined" className="rounded-xl p-2" onClick={()=>{navigate("/choice")}}>
+            <Card key={idx} variant="outlined" className="rounded-xl p-2" >
               <CardContent className="p-0">
                 <div className="mt-1 p-2">
                     <div className="flex flex-row">

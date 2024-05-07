@@ -6,8 +6,6 @@ export default function NavBar() {
   const currentLocation = useLocation();
   const navigate = useNavigate();
 
-  console.log(currentLocation.pathname)
-
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200">
       <div className="grid h-full max-w-lg grid-cols-5 mx-auto font-medium">
