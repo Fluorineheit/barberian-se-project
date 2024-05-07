@@ -7,10 +7,32 @@ import {
   InputAdornment,
   Button,
 } from "@mui/material";
+import {useState} from 'react'
 import { Email, Visibility } from "@mui/icons-material/";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  } from "react-router-dom";
+
 
 export default function Login() {
+  const [emailForm, setEmailForm] = useState('');
+  const [passwordForm, setPasswordForm] = useState('');
+
+  const handleChangePassword = (e) => {
+    setPasswordForm(e.target.value);
+  }
+
+  const handleChangeEmail = (e) => {
+    setEmailForm(e.target.value);
+  }
+
+  function loginVerify() {
+    if(emailForm === '' || passwordForm === '') {
+      alert('Please fill the form');
+      // validate
+    } else {
+      navigate("/home")
+    }
+  }
+
   const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -23,6 +45,8 @@ export default function Login() {
         <CardActions className="grid gap-4">
           <TextField
             id="input-with-icon-textfield"
+            value={emailForm}
+            onChange={handleChangeEmail}
             label="Email"
             type="email"
             InputProps={{
@@ -36,6 +60,8 @@ export default function Login() {
           />
           <TextField
             id="input-with-icon-password"
+            value={passwordForm}
+            onChange={handleChangePassword}
             label="Password"
             type="password"
             className="ml-0"
@@ -48,7 +74,7 @@ export default function Login() {
             }}
             variant="outlined"
           />
-          <Button onClick={()=>{navigate("/home")}} variant="contained" className="bg-[#797EF6] px-10 rounded-xl">
+          <Button onClick={()=>{loginVerify()}} variant="contained" className="bg-[#797EF6] px-10 rounded-xl">
             Login
           </Button>
           <Button onClick={()=>{navigate('/register')}} variant="text" className="px-10 rounded-xl capitalize">

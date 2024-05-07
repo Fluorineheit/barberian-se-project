@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { LocationOn } from "@mui/icons-material/";
 
 
 export default function OrderPage() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <p className="text-3xl font-semibold">Order List</p>
@@ -17,7 +21,7 @@ export default function OrderPage() {
               <p className="font-medium text-sm">Hair care</p>
             </div>
             <div className="flex justify-end items-center">
-              <LocationOn className="text-3xl"/>
+              <LocationOn onClick={()=>{navigate('/maps')}} className="text-3xl"/>
             </div>
           </div>
         </div>
@@ -33,7 +37,7 @@ export default function OrderPage() {
               <p className="font-medium text-sm">Hair care</p>
             </div>
             <div className="flex justify-end items-center">
-              <LocationOn className="text-3xl"/>
+              <LocationOn onClick={()=>{navigate('/maps')}} className="text-3xl"/>
             </div>
           </div>
         </div>
@@ -46,7 +50,7 @@ export default function OrderPage() {
               <p className="font-medium text-sm">Hair care</p>
             </div>
             <div className="flex justify-end items-center">
-              <LocationOn className="text-3xl"/>
+              <LocationOn onClick={()=>{navigate('/maps')}} className="text-3xl"/>
             </div>
           </div>
         </div>

@@ -1,6 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { ImageList, ImageListItem } from "@mui/material";
+import ad_1 from "../assets/ad_1.png";
+import ad_2 from "../assets/ad_2.png";
+import ad_3 from "../assets/ad_3.png";
+import model_fem_1 from "../assets/model_fem_1.png";
+import model_fem_2 from "../assets/model_fem_2.png";
+import model_fem_3 from "../assets/model_fem_3.png";
+import model_male_1 from "../assets/model_male_1.png";
+import model_male_2 from "../assets/model_male_2.png";
+import model_male_3 from "../assets/model_male_3.png";
 
 export default function Home() {
   return (
@@ -11,20 +20,25 @@ export default function Home() {
         to do?
       </p>
 
-        <div
-          style={{ display: "flex", overflowX: "auto", whiteSpace: "nowrap", gap: "8px"}}
-        >
-          {adPicture.map((item) => (
-            <img
-              key={item.img}
-              srcSet={`${item.img}`}
-              src={`${item.img}`}
-              alt={item.title}
-              loading="lazy"
-              style={{ width: '300px', height:'130px',}}
-            />
-          ))}
-        </div>
+      <div
+        style={{
+          display: "flex",
+          overflowX: "auto",
+          whiteSpace: "nowrap",
+          gap: "8px",
+        }}
+      >
+        {adPicture.map((item) => (
+          <img
+            key={item.img}
+            srcSet={`${item.img}`}
+            src={`${item.img}`}
+            alt={item.title}
+            loading="lazy"
+            style={{ width: "300px", height: "130px" }}
+          />
+        ))}
+      </div>
 
       <div className="flex mt-4">
         <p className="text-xl font-semibold">Inspiration</p>
@@ -50,42 +64,42 @@ export default function Home() {
 
 const adPicture = [
   {
-    img: "src/assets/ad_1.png",
-    title: "ad 1"    
+    img: ad_1,
+    title: "ad 1",
   },
   {
-    img: "src/assets/ad_2.png",
-    title: "ad 2"
+    img: ad_2,
+    title: "ad 2",
   },
   {
-    img: "src/assets/ad_3.png",
-    title: "ad 3"
-  }
-]
+    img: ad_3,
+    title: "ad 3",
+  },
+];
 
 const itemData = [
   {
-    img: "src/assets/model_fem_1.png",
+    img: model_fem_1,
     title: "model female 1",
   },
   {
-    img: "src/assets/model_fem_2.png",
+    img: model_fem_2,
     title: "model female  2",
   },
   {
-    img: "src/assets/model_fem_3.png",
+    img: model_fem_3,
     title: "model female 3",
   },
   {
-    img: "src/assets/model_male_1.png",
+    img: model_male_1,
     title: "model male 1",
   },
   {
-    img: "src/assets/model_male_2.png",
+    img: model_male_2,
     title: "model male 2",
   },
   {
-    img: "src/assets/model_male_3.png",
+    img: model_male_3,
     title: "model male 3",
   },
 ];
