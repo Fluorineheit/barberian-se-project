@@ -10,11 +10,14 @@ import {
 import {useState} from 'react'
 import { Email, Visibility } from "@mui/icons-material/";
 import { useNavigate,  } from "react-router-dom";
+import AlertDialog from '../components/AlertDialog'
 
 
 export default function Login() {
   const [emailForm, setEmailForm] = useState('');
   const [passwordForm, setPasswordForm] = useState('');
+  const [open, setOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleChangePassword = (e) => {
     setPasswordForm(e.target.value);
@@ -24,10 +27,14 @@ export default function Login() {
     setEmailForm(e.target.value);
   }
 
+  const handleClose = () => {
+    setOpen(false);
+  }
+
   function loginVerify() {
     if(emailForm === '' || passwordForm === '') {
-      alert('Please fill the form');
-      // validate
+      setAlertMessage('Please fill the form');
+      setOpen(true);
     } else {
       navigate("/home")
     }
@@ -86,6 +93,8 @@ export default function Login() {
           </Button>
         </CardActions>
       </Card>
+      <AlertDialog handleClose={handleClose} alertMessage={alertMessage} open={open}/>
     </div>
+    
   );
 }
