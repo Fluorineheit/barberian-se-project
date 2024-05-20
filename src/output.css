@@ -887,6 +887,10 @@ video {
   text-align: center;
 }
 
+#root :is(.align-middle) {
+  vertical-align: middle;
+}
+
 #root :is(.text-3xl) {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -966,6 +970,10 @@ video {
 
 #root :is(.drop-shadow-none) {
   --tw-drop-shadow: drop-shadow(0 0 #0000);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+#root :is(.filter) {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

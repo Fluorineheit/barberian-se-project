@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar";
 import { TextField, InputAdornment } from "@mui/material";
-import { Description, Search, Star } from "@mui/icons-material/";
+import { Search, Star } from "@mui/icons-material/";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import shop_1 from "../assets/shop_1.png";
 import shop_2 from "../assets/shop_2.png";
@@ -16,7 +17,7 @@ import product_1 from "../assets/product_1.png";
 import product_2 from "../assets/product_2.png";
 import product_3 from "../assets/product_3.png";
 
-const shopImage = [
+const shopImages = [
   {
     img: shop_1,
     title: "The Classic Cut",
@@ -165,6 +166,10 @@ const shopImage = [
 
 export default function SearchPage() {
  const navigate = useNavigate();
+ 
+ const [searchQuery, setSearchQuery] = useState('');
+
+ const filteredShops = shopImages.filter(shop => shop.title.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (
     <div className="container m-0">
@@ -172,7 +177,9 @@ export default function SearchPage() {
       <TextField
         id="input-with-icon-password"
         type="text"
-        placeholder="search"
+        placeholder="search..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
         className="ml-0"
         InputProps={{
           startAdornment: (
@@ -184,26 +191,26 @@ export default function SearchPage() {
         variant="outlined"
       />
       <div className="grid grid-cols-2 gap-2 ">
-        {shopImage
-          .map(item => (
-            <Card key={item.img} variant="outlined" className="rounded-xl" onClick={()=>{navigate("/choice", {state: {item}})}}>
-              <CardContent className="p-0">
-                <img src={item.img} />
-                <div className="mt-1 p-2">
-                  <Typography className="font-semibold" gutterBottom>
-                    {item.title}
-                  </Typography>
-                  <div className="grid grid-flow-col text-sm">
-                    <div>{item.distance}</div>
-                    <div className="flex flex-row-reverse">
-                      <Star className="text-yellow-500 text-[16px]" />
-                      <p>{item.rating}</p>
-                    </div>
-                  </div>
+        {filteredShops.length === 0 && <p className="text-center align-middle">No shop found</p>}
+        {filteredShops.map(item => (
+          <Card key={item.img} variant="outlined" className="rounded-xl" onClick={()=>{navigate("/choice", {state: {item}})}}>
+          <CardContent className="p-0">
+            <img src={item.img} />
+            <div className="mt-1 p-2">
+              <Typography className="font-semibold" gutterBottom>
+                {item.title}
+              </Typography>
+              <div className="grid grid-flow-col text-sm">
+                <div>{item.distance}</div>
+                <div className="flex flex-row-reverse">
+                  <Star className="text-yellow-500 text-[16px]" />
+                  <p>{item.rating}</p>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        ))}
       </div>
       <NavBar />
     </div>
