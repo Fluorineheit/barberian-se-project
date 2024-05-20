@@ -16,7 +16,7 @@ import {
 import { Email, Visibility, Person, Phone } from "@mui/icons-material/";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import AlertDialog from '../components/AlertDialog'
 
 export default function Login() {
   const [emailForm, setEmailForm] = useState("");
@@ -201,15 +201,7 @@ export default function Login() {
           </Button>
         </CardActions>
       </Card>
-      <Dialog onClose={handleClose} open={open}>
-        <DialogTitle>Alert</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            {alertMessage}
-          </DialogContentText>
-        </DialogContent>
-        <Button onClick={handleClose}>Okay</Button>
-      </Dialog>
+      <AlertDialog handleClose={handleClose} alertMessage={alertMessage} open={open}/>
     </div>
   );
 }
