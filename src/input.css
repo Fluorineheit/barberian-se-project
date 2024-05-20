@@ -22,10 +22,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 152px;
-    height: 152px;
+    width: 130px;
+    height: 130px;
     padding: 0 20px;
   }
+
+  .servicesimg2 img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+
   .services-container {
     display: flex;
     flex-wrap: wrap;

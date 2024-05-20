@@ -10,7 +10,7 @@ const ServicePage = () => {
     <div className="container">
       <p className="text-3xl font-semibold">Services</p>
       <div className="subTitle">For women</div>
-      <div className="services-container">
+      <div className="services-container grid grid-cols-2 gap-4">
         <div className="servicesimg2">
           <img src={haircare} className="img" />
           <div className="subTitle">Hair Care</div>
