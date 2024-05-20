@@ -80,6 +80,7 @@ export default function Login() {
       setAlertMessage("Register success");
       setValidRegister(true);
       handleClickOpen();
+      
       setEmailForm("");
       setPasswordForm("");
       setConfirmPasswordForm("");

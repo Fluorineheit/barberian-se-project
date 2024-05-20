@@ -31,6 +31,7 @@ export default function Login() {
     setOpen(false);
   }
 
+
   function loginVerify() {
     if(emailForm === '' || passwordForm === '') {
       setAlertMessage('Please fill the form');
