@@ -8,11 +8,15 @@ import {
   Button,
   Switch,
   FormControlLabel,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
 } from "@mui/material";
 import { Email, Visibility, Person, Phone } from "@mui/icons-material/";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from 'uuid';
+
 
 export default function Login() {
   const [emailForm, setEmailForm] = useState("");
@@ -21,6 +25,20 @@ export default function Login() {
   const [passwordForm, setPasswordForm] = useState("");
   const [confirmPasswordForm, setConfirmPasswordForm] = useState("");
   const [checked, setChecked] = useState(false);
+  const [validRegister, setValidRegister] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    if(validRegister){
+      navigate("/login");
+    }
+  };
 
   const handleChangeEmail = (e) => {
     setEmailForm(e.target.value);
@@ -43,38 +61,32 @@ export default function Login() {
   };
 
   const registerVerify = () => {
+    setAlertMessage("");
+    setValidRegister(false);
     if (
       emailForm === "" ||
       passwordForm === "" ||
       confirmPasswordForm === "" ||
       phoneNumberForm === "" ||
-      usernameForm === ""
+      usernameForm === "" ||
+      !checked
     ) {
-      alert("Please fill the form");
+      setAlertMessage("Please fill the form");
+      handleClickOpen()
     } else if (passwordForm !== confirmPasswordForm) {
-      alert("Password and confirmed password must be the same");
+      setAlertMessage("Password and confirmed password must be the same");
+      handleClickOpen();
     } else {
-      registerUserToJson();
-      alert("success register");
-      // navigate("/login");
+      setAlertMessage("Register success");
+      setValidRegister(true);
+      handleClickOpen();
+      setEmailForm("");
+      setPasswordForm("");
+      setConfirmPasswordForm("");
+      setPhoneNumberForm("");
+      setUsernameForm("");
+      setChecked(false);
     }
-  }
-
-  const registerUserToJson = () => {
-    const uuid = uuidv4();
-    console.log(uuid)
-
-    const user = {
-      email: emailForm,
-      password: passwordForm,
-      phoneNumber: phoneNumberForm,
-      username: usernameForm,
-    };
-    //put the user object to src/data/userInformation.json
-
-    
-
-    return JSON.stringify(user);
   }
 
   const navigate = useNavigate();
@@ -170,6 +182,9 @@ export default function Login() {
           <FormControlLabel
             sx={{ "& .MuiTypography-body1": { fontSize: "12px" } }}
             control={<Switch />}
+            onChange={(e) => {
+              setChecked(e.target.checked);
+            }}
             label="By signing up, you agree to Barberian Terms of Service and Privacy Policy."
           />
           <Button variant="contained" onClick={()=>{registerVerify()}} className="bg-[#797EF6] px-10 rounded-xl">
@@ -186,6 +201,15 @@ export default function Login() {
           </Button>
         </CardActions>
       </Card>
+      <Dialog onClose={handleClose} open={open}>
+        <DialogTitle>Alert</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            {alertMessage}
+          </DialogContentText>
+        </DialogContent>
+        <Button onClick={handleClose}>Okay</Button>
+      </Dialog>
     </div>
   );
 }
