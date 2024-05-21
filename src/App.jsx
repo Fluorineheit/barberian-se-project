@@ -10,6 +10,7 @@ import Profile from './pages/Profile';
 import Reviews from './pages/Reviews';
 import Maps from './pages/Maps';
 import Products from './pages/Products';
+import Booking from './pages/Booking';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 import Schedule from './pages/Schedule';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/maps' element={<Maps/>}></Route>
         <Route path='/products' element={<Products />}></Route>
         <Route path='/schedule' element={<Schedule/>}></Route>
+        <Route path='/booking' element={<Booking/>}></Route>
       </Routes>
     </Router>
     </>
