@@ -934,6 +934,11 @@ video {
   text-transform: none;
 }
 
+#root :is(.text-\[\#797EF6\]) {
+  --tw-text-opacity: 1;
+  color: rgb(121 126 246 / var(--tw-text-opacity));
+}
+
 #root :is(.text-black) {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -942,6 +947,11 @@ video {
 #root :is(.text-gray-500) {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+#root :is(.text-red-500) {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 #root :is(.text-white) {
