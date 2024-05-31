@@ -19,6 +19,8 @@ export default function Login() {
   const [open, setOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
   const [validEmail, setValidEmail] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [passwordType, setPasswordType] = useState("password");
 
   const handleChangePassword = (e) => {
     setPasswordForm(e.target.value);
@@ -52,6 +54,16 @@ export default function Login() {
       navigate("/home")
     }
   }
+
+  const passwordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+
+    if (isPasswordVisible) {
+      setPasswordType("password");
+    } else {
+      setPasswordType("text");
+    }
+  };
   
 
   const navigate = useNavigate();
@@ -84,7 +96,7 @@ export default function Login() {
             value={passwordForm}
             onChange={handleChangePassword}
             label="Password"
-            type="password"
+            type={passwordType}
             className="ml-0"
             InputProps={{
               startAdornment: (
@@ -92,6 +104,17 @@ export default function Login() {
                   <Visibility />
                 </InputAdornment>
               ),
+              endAdornment: (
+                <InputAdornment position="end">
+                   <p
+                    onClick={() => {
+                      passwordVisibility();
+                    }}
+                  >
+                    {isPasswordVisible ? "Hide" : "Show"}
+                  </p>
+                </InputAdornment>
+              )
             }}
             variant="outlined"
           />
