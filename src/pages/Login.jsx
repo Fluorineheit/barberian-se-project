@@ -18,6 +18,7 @@ export default function Login() {
   const [passwordForm, setPasswordForm] = useState('');
   const [open, setOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
+  const [validEmail, setValidEmail] = useState(false);
 
   const handleChangePassword = (e) => {
     setPasswordForm(e.target.value);
@@ -31,15 +32,27 @@ export default function Login() {
     setOpen(false);
   }
 
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    if(email.match(re) !== null){
+      setValidEmail(true);
+    }
+  }
 
   function loginVerify() {
+    validateEmail(emailForm);
+
     if(emailForm === '' || passwordForm === '') {
       setAlertMessage('Please fill the form');
       setOpen(true);
-    } else {
+    } else if (!validEmail) {
+      setAlertMessage('Email is not valid');
+      setOpen(true);
+    } else { 
       navigate("/home")
     }
   }
+  
 
   const navigate = useNavigate();
   return (

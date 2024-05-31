@@ -3,7 +3,6 @@ import { Dialog, DialogTitle, DialogContent, DialogContentText, Button } from '@
 
 export default function AlertDialog({ open, handleYes, handleClose, alertMessage, isSecondButton=false, redirect=false }) {
   
-
   return (
     <Dialog onClose={handleClose} open={open}>
       <DialogTitle>Alert</DialogTitle>
