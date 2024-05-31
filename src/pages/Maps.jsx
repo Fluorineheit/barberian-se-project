@@ -22,7 +22,7 @@ const style = {
 
 export default function Maps() {
   
-  const position = [-6.603731380944771, 106.65773772478984];
+  const position = [-6.873737796807085, 106.88723938609354];
   const back = useNavigate();
   
   const [open, setOpen] = useState(false);
@@ -42,8 +42,7 @@ export default function Maps() {
   };
 
   const handleClick = () => {
-    const [ lat, lng ] = mapPosition
-    window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`)
+    window.open(`https://maps.app.goo.gl/vFwechNxEqf5cNkr8`)
   }
 
   return (
