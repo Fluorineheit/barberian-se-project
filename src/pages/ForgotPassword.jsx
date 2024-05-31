@@ -25,20 +25,18 @@ import {
     }
 
     const validateEmail = (email) => {
-      const re = /\S+@\S+\.\S+/;
-      if(email.match(re) !== null){
-        setValidEmail(true);
-      }
+      const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      return re.test(email);
     }
 
     const validateForgetEmail = () => {
       setIsValid(false);
-      validateEmail(emailForm);
+      const isEmailValid = validateEmail(emailForm);
       if(emailForm === '' ) {
         setAlertMessage('Please fill the form');
         handleOpen();
       }
-      else if (!validEmail) {
+      else if (!isEmailValid) {
         setAlertMessage('Email is not valid');
         handleOpen();
       } else {

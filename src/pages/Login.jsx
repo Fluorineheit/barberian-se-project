@@ -35,19 +35,17 @@ export default function Login() {
   }
 
   const validateEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
-    if(email.match(re) !== null){
-      setValidEmail(true);
-    }
+    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return re.test(email);
   }
 
   function loginVerify() {
-    validateEmail(emailForm);
+    const isEmailValid = validateEmail(emailForm);
 
     if(emailForm === '' || passwordForm === '') {
       setAlertMessage('Please fill the form');
       setOpen(true);
-    } else if (!validEmail) {
+    } else if (!isEmailValid) {
       setAlertMessage('Email is not valid');
       setOpen(true);
     } else { 
