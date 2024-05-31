@@ -5,7 +5,7 @@ import haircare from "../assets/haircare.png";
 import hairwash from "../assets/hairwash.png";
 import haircut from "../assets/haircut.png";
 import hairstyle from "../assets/hairstyle.png";
-import haircolouring from "../assets/haircolouring.png";
+import haircolouring from "../assets/haircolour.png";
 import beardTrimming from "../assets/beardTrimming.png";
 import haircut2 from "../assets/haircut2.png";
 import shaving from "../assets/shaving.png";

@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { LocationOn } from "@mui/icons-material/";
 
-
 export default function OrderPage() {
 
   const navigate = useNavigate();
@@ -27,6 +26,7 @@ export default function OrderPage() {
         </div>
 
         <div className="border-b-2 mb-4"/>
+        
         <p className="text-md font-semibold">Upcoming</p>
 
         <div className="drop-shadow-none border-0 bg-white">
