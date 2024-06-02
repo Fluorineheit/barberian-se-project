@@ -15,7 +15,6 @@ import {
   export default function ForgetPassword() {
     const [open, setOpen] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
-    const [validEmail, setValidEmail] = useState(false);
     const [isValid, setIsValid] = useState(false);
     const [emailForm, setEmailForm] = useState("");
     const navigate = useNavigate();

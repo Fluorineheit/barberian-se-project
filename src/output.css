@@ -782,6 +782,14 @@ video {
   gap: 1rem;
 }
 
+#root :is(.justify-self-end) {
+  justify-self: end;
+}
+
+#root :is(.justify-self-center) {
+  justify-self: center;
+}
+
 #root :is(.rounded-full) {
   border-radius: 9999px;
 }
@@ -898,6 +906,10 @@ video {
 
 #root :is(.text-\[16px\]) {
   font-size: 16px;
+}
+
+#root :is(.text-\[40px\]) {
+  font-size: 40px;
 }
 
 #root :is(.text-sm) {
