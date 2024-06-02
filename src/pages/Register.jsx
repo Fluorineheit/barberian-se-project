@@ -18,7 +18,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AlertDialog from "../components/AlertDialog";
 
-export default function Login() {
+export default function Register() {
   const [emailForm, setEmailForm] = useState("");
   const [phoneNumberForm, setPhoneNumberForm] = useState("");
   const [usernameForm, setUsernameForm] = useState("");

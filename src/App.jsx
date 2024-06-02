@@ -14,6 +14,7 @@ import Booking from './pages/Booking';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 import Schedule from './pages/Schedule';
+import ManageAccount from './pages/ManageAccount';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path='/products' element={<Products />}></Route>
         <Route path='/schedule' element={<Schedule/>}></Route>
         <Route path='/booking' element={<Booking/>}></Route>
+        <Route path='/manage-account' element={<ManageAccount/>}></Route>
       </Routes>
     </Router>
     </>

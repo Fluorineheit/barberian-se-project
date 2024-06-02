@@ -35,7 +35,7 @@ export default function Profile() {
                 </p>
             </div>
             <Stack spacing={2}>
-                <Button startIcon={<Person />} variant="text" className="justify-start rounded-xl text-black normal-case" >Manage Account</Button>
+                <Button onClick={()=>{navigate('/manage-account')}} startIcon={<Person />} variant="text" className="justify-start rounded-xl text-black normal-case" >Manage Account</Button>
                 <Button startIcon={<Favorite />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Favorite</Button>
                 <Button startIcon={<Comment />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Review</Button>
                 <Button startIcon={<Receipt />} variant="text" className="justify-start rounded-xl text-black normal-case" >Order History</Button>
