@@ -61,7 +61,24 @@ const ServicePage = () => {
       <div className="subTitle">For women</div>
       <div className="services-container grid grid-cols-2 gap-4">
         {servicesData.map((service) => (
-          <div key={service.img} className="servicesimg2" onClick={()=>{navigate("/booking", {state: {service}})}}>
+          // <div key={service.img} className="servicesimg2" onClick={()=>{navigate("/booking", {state: {service}})}}>
+          //   <img src={service.img} className="img" />
+          //   <div className="div-7">{service.title}</div>
+          // </div>
+          <div key={service.img} className="servicesimg2" onClick={()=>{
+            if (service.img === hairstyle || service.title === "Hair Styling" && service.img === haircut || service.title === "Hair Cut") {
+              navigate("/bookingWomen", {state: {service}});
+            }
+            else if (service.img === haircolouring || service.title === "Hair Colouring") {
+              navigate("/bookingWomenColor", {state: {service}});
+            }
+            else if (service.img === haircare || service.title === "Hair Care") {
+              navigate("/bookingWomenCare", {state: {service}});
+            }
+             else {
+              navigate("/booking", {state: {service}});
+            }
+          }}>
             <img src={service.img} className="img" />
             <div className="div-7">{service.title}</div>
           </div>
@@ -71,7 +88,17 @@ const ServicePage = () => {
       <div className="subTitle mt-4">For men</div>
       <div className="services-container grid grid-cols-2 gap-4">
         {servicesDataMen.map((service) => (
-          <div key={service.img} className="servicesimg2" onClick={()=>{navigate("/booking", {state: {service}})}}>
+          <div key={service.img} className="servicesimg2" onClick={()=>{
+            if (service.img === beardTrimming || service.title === "Beard Trimming" && service.img === shaving || service.title === "Clean Shaving") {
+              navigate("/bookingBeard", {state: {service}});
+            }
+            else if (service.img === haircut2 || service.title === "Hair Cut") { 
+              navigate("/bookingCutMen", {state: {service}});
+            }
+             else {
+              navigate("/booking", {state: {service}});
+            }
+          }}>
             <img src={service.img} className="img" />
             <div className="div-7">{service.title}</div>
           </div>
