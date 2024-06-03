@@ -37,7 +37,7 @@ export default function Profile() {
             <Stack spacing={2}>
                 <Button onClick={()=>{navigate('/manage-account')}} startIcon={<Person />} variant="text" className="justify-start rounded-xl text-black normal-case" >Manage Account</Button>
                 <Button onClick={()=>{navigate('/favorite')}} startIcon={<Favorite />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Favorite</Button>
-                <Button startIcon={<Comment />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Review</Button>
+                <Button onClick={()=>{navigate('/your-reviews')}} startIcon={<Comment />} variant="text" className="justify-start rounded-xl text-black normal-case" >Your Review</Button>
                 <Button startIcon={<Receipt />} variant="text" className="justify-start rounded-xl text-black normal-case" >Order History</Button>
                 <Button startIcon={<Help />} variant="text" className="justify-start rounded-xl text-black normal-case" >Help Center</Button>
                 <Button onClick={()=>setOpen(true)} startIcon={<Logout />} variant="text" className="justify-start rounded-xl text-red-500 normal-case" >Logout</Button>

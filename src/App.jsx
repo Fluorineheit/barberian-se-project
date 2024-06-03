@@ -15,7 +15,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ServicePage from './pages/ServicePage';
 import Schedule from './pages/Schedule';
 import ManageAccount from './pages/ManageAccount';
-import UserFavorite from './pages/UserFavorite'
+import UserFavorites from './pages/UserFavorites'
+import UserReviews from './pages/UserReviews'
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
         <Route path='/schedule' element={<Schedule/>}></Route>
         <Route path='/booking' element={<Booking/>}></Route>
         <Route path='/manage-account' element={<ManageAccount/>}></Route>
-        <Route path='/favorite' element={<UserFavorite/>}></Route>
+        <Route path='/favorite' element={<UserFavorites/>}></Route>
+        <Route path='/your-reviews' element={<UserReviews/>}></Route>
       </Routes>
     </Router>
     </>
