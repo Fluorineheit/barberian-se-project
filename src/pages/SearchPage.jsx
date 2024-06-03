@@ -167,7 +167,7 @@ const shopImages = [
   {
     img: shop_7,
     title: "The Gentleman Cut",
-    distance: "2.0 km",
+    distance: "1.5 km",
     rating: "3.9",
     description: "Selamat datang di The Gentleman Cut. Tim tukang cukur kami yang terampil menawarkan berbagai layanan, mulai dari potongan rambut klasik hingga pemangkasan jenggot yang sempurna. Kami berdedikasi untuk memberikan perawatan berkualitas tinggi dan pengalaman mencukur yang istimewa. Jadwalkan kunjungan Anda dan rasakan transformasi di The Gentleman Cut.",
     products: [
