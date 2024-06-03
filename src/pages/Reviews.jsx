@@ -156,7 +156,7 @@ export default function Reviews() {
                     />
                     <p style={{ marginLeft: "20px" }}>{review.date}</p>
                   </div>
-                  <Typography className="font-semibold mt-4" gutterBottom>
+                  <Typography className=" mt-4" gutterBottom>
                     {review.review}
                   </Typography>
                   <Button

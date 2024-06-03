@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import { styled } from "@mui/system";
-import { Button, Stack, Modal, Box, Typography,  } from "@mui/material/";
+import { Button, Stack, Modal, Box, Typography  } from "@mui/material/";
 import { Transition } from 'react-transition-group';
 import { Snackbar } from '@mui/base/Snackbar';
 import { ArrowBackIos, Close } from "@mui/icons-material/";

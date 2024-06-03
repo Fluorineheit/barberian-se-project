@@ -618,6 +618,10 @@ video {
   margin: 0px;
 }
 
+#root :is(.m-4) {
+  margin: 1rem;
+}
+
 #root :is(.mx-auto) {
   margin-left: auto;
   margin-right: auto;
@@ -901,6 +905,11 @@ video {
 #root :is(.px-5) {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+#root :is(.py-4) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #root :is(.pb-2) {
