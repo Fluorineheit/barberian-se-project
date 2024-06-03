@@ -18,6 +18,11 @@ import ManageAccount from './pages/ManageAccount';
 import UserFavorites from './pages/UserFavorites'
 import UserReviews from './pages/UserReviews'
 import OrderHistory from './pages/OrderHistory'
+import BookingBeard from './pages/BookingBeard'
+import BookingWomen from './pages/BookingWomen'
+import BookingWomenColor from './pages/BookingWomenColor'
+import BookingCutMen from './pages/BookingCutMen'
+import BookingWomenCare from './pages/BookingWomenCare'
 
 function App() {
   return (
@@ -39,6 +44,11 @@ function App() {
         <Route path='/products' element={<Products />}></Route>
         <Route path='/schedule' element={<Schedule/>}></Route>
         <Route path='/booking' element={<Booking/>}></Route>
+        <Route path='/bookingBeard' element={<BookingBeard/>}></Route>
+        <Route path='/bookingWomen' element={<BookingWomen/>}></Route>
+        <Route path='/bookingWomenColor' element={<BookingWomenColor/>}></Route>
+        <Route path='/bookingCutMen' element={<BookingCutMen/>}></Route>
+        <Route path='/bookingWomenCare' element={<BookingWomenCare/>}></Route>
         <Route path='/manage-account' element={<ManageAccount/>}></Route>
         <Route path='/favorite' element={<UserFavorites/>}></Route>
         <Route path='/your-reviews' element={<UserReviews/>}></Route>
