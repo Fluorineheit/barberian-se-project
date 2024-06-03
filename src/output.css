@@ -598,8 +598,16 @@ video {
   left: 0px;
 }
 
+#root :is(.right-2) {
+  right: 0.5rem;
+}
+
 #root :is(.top-0) {
   top: 0px;
+}
+
+#root :is(.top-2) {
+  top: 0.5rem;
 }
 
 #root :is(.z-50) {
@@ -818,6 +826,10 @@ video {
   border-width: 0px;
 }
 
+#root :is(.border-2) {
+  border-width: 2px;
+}
+
 #root :is(.border-b-2) {
   border-bottom-width: 2px;
 }
@@ -840,6 +852,11 @@ video {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
+#root :is(.border-red-500) {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 #root :is(.bg-\[\#797EF6\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(121 126 246 / var(--tw-bg-opacity));
@@ -855,6 +872,21 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+#root :is(.bg-gray-700) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+#root :is(.bg-gray-300) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+#root :is(.bg-gray-400) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 #root :is(.object-cover) {
   -o-object-fit: cover;
      object-fit: cover;
@@ -862,6 +894,10 @@ video {
 
 #root :is(.p-0) {
   padding: 0px;
+}
+
+#root :is(.p-10) {
+  padding: 2.5rem;
 }
 
 #root :is(.p-2) {
@@ -874,6 +910,10 @@ video {
 
 #root :is(.p-4) {
   padding: 1rem;
+}
+
+#root :is(.p-1) {
+  padding: 0.25rem;
 }
 
 #root :is(.px-10) {
