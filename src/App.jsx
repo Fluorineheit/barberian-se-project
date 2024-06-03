@@ -17,6 +17,7 @@ import Schedule from './pages/Schedule';
 import ManageAccount from './pages/ManageAccount';
 import UserFavorites from './pages/UserFavorites'
 import UserReviews from './pages/UserReviews'
+import OrderHistory from './pages/OrderHistory'
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path='/manage-account' element={<ManageAccount/>}></Route>
         <Route path='/favorite' element={<UserFavorites/>}></Route>
         <Route path='/your-reviews' element={<UserReviews/>}></Route>
+        <Route path='/order-history' element={<OrderHistory/>}></Route>
       </Routes>
     </Router>
     </>

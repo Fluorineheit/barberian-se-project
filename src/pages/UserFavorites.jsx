@@ -66,7 +66,6 @@ const shopImages = [
 
 export default function UserFavorite() {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [favorite, setFavorite] = useState(shopImages);
   

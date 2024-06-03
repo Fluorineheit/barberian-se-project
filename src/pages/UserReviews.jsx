@@ -33,8 +33,7 @@ export default function UserReviews() {
 
   return (
     <div className="container pb-2">
-      <div className="flex flex-row">
-        <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center">
           <Button
             className=""
             onClick={() => {
@@ -43,8 +42,7 @@ export default function UserReviews() {
           >
             <ArrowBackIos />
           </Button>
-        </div>
-        <p className="text-3xl font-semibold">Your Reviews</p>
+        <p className="text-xl font-semibold text-center">Your Reviews</p>
       </div>
 
       <div className="grid grid-cols-1 gap-3 ">
