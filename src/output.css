@@ -688,6 +688,10 @@ video {
   min-height: 100vh;
 }
 
+#root :is(.w-10) {
+  width: 2.5rem;
+}
+
 #root :is(.w-6) {
   width: 1.5rem;
 }
@@ -780,6 +784,10 @@ video {
 
 #root :is(.gap-4) {
   gap: 1rem;
+}
+
+#root :is(.self-center) {
+  align-self: center;
 }
 
 #root :is(.justify-self-end) {
