@@ -1,11 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import { ArrowBackIos } from "@mui/icons-material/";
-import { Button, Stack, Fade } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import { useState } from "react";
-
+import "leaflet/dist/images/marker-icon-2x.png";
+import "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 
 const style = {
