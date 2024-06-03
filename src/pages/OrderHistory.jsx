@@ -26,7 +26,7 @@ export default function OrderHistory() {
           <div className="grid grid-flow-col p-4">
             <div>
             <p className="font-bold text-md">The Gentleman Cut</p>
-              <p className="font-medium text-sm">Hair care</p>
+              <p className="font-medium text-sm">Hair cut</p>
             </div>
             <div className="flex justify-end items-center">
               <LocationOn onClick={()=>{navigate('/maps')}} className="text-3xl"/>

@@ -13,6 +13,8 @@ import shop_3 from "../assets/shop_3.png";
 import shop_4 from "../assets/shop_4.png";
 import shop_5 from "../assets/shop_5.png";
 import shop_6 from "../assets/shop_6.png";
+import shop_7 from "../assets/shop_7.png";
+import shop_8 from "../assets/shop_8.png";
 import product_1 from "../assets/product_1.png";
 import product_2 from "../assets/product_2.png";
 import product_3 from "../assets/product_3.png";
@@ -84,6 +86,25 @@ const shopImages = [
         img: product_2,
         title: "Pomade",
         price: "250.000"
+      },
+      {
+        img: product_3,
+        title: "Conditioner",
+        price: "90.000"
+      },
+    ]
+  },
+  {
+    img: shop_8,
+    title: "Fauna Loa Salon",
+    distance: "1.8 km",
+    rating: "4.2",
+    description: "Temukan kecantikan alami Anda di Fauna Loa Salon. Penata rambut kami ahli dalam semua jenis dan tekstur rambut. Kami menyediakan berbagai perawatan dan layanan untuk memperindah ikal, gulungan, atau gelombang alami Anda. Jadwalkan konsultasi untuk perawatan rambut yang dipersonalisasi.",
+    products: [
+      {
+        img: product_1,
+        title: "Shampoo",
+        price: "100.000"
       },
       {
         img: product_3,

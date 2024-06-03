@@ -13,6 +13,8 @@ import shop_3 from "../assets/shop_3.png";
 import shop_4 from "../assets/shop_4.png";
 import shop_5 from "../assets/shop_5.png";
 import shop_6 from "../assets/shop_6.png";
+import shop_7 from "../assets/shop_7.png";
+import shop_8 from "../assets/shop_8.png";
 import product_1 from "../assets/product_1.png";
 import product_2 from "../assets/product_2.png";
 import product_3 from "../assets/product_3.png";
@@ -50,6 +52,30 @@ const shopImages = [
     distance: "1.2 km",
     rating: "3.9",
     description: "Rangkul kecantikan alami Anda di Mos Eisley. Penata rambut kami berspesialisasi dalam menangani semua jenis dan tekstur rambut. Kami menawarkan berbagai perawatan dan layanan untuk mempercantik ikal, gulungan, atau gelombang alami Anda. Jadwalkan konsultasi untuk menciptakan rutinitas perawatan rambut yang dipersonalisasi.",
+    products: [
+      {
+        img: product_1,
+        title: "Shampoo",
+        price: "100.000"
+      },
+      {
+        img: product_2,
+        title: "Pomade",
+        price: "250.000"
+      },
+      {
+        img: product_3,
+        title: "Conditioner",
+        price: "90.000"
+      },
+    ]
+  },
+  {
+    img: shop_7,
+    title: "The Gentleman Cut",
+    distance: "2.0 km",
+    rating: "3.9",
+    description: "Selamat datang di The Gentleman Cut. Tim tukang cukur kami yang terampil menawarkan berbagai layanan, mulai dari potongan rambut klasik hingga pemangkasan jenggot yang sempurna. Kami berdedikasi untuk memberikan perawatan berkualitas tinggi dan pengalaman mencukur yang istimewa. Jadwalkan kunjungan Anda dan rasakan transformasi di The Gentleman Cut.",
     products: [
       {
         img: product_1,
