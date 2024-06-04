@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import { styled } from "@mui/system";
-import { Button, Stack, Modal, Box, Typography  } from "@mui/material/";
-import { Transition } from 'react-transition-group';
-import { Snackbar } from '@mui/base/Snackbar';
+import { Button, Stack, Modal, Box, Typography } from "@mui/material/";
+import { Transition } from "react-transition-group";
+import { Snackbar } from "@mui/base/Snackbar";
 import { ArrowBackIos, Close } from "@mui/icons-material/";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import dayjs from "dayjs";
+import { isPast } from "date-fns";
 
+import dayjs from "dayjs";
 
 export default function Schedule() {
   const navigate = useNavigate();
@@ -22,18 +23,29 @@ export default function Schedule() {
   const handleOnEnter = () => {
     setExited(false);
   };
+  
+  const handleDateClick = (date) => {
+    const formatedDate = date.format("DD MMMM YYYY");
+    if (isPast(formatedDate)) {
+      setDateOpen(true);
+      return;
+    }
+
+    setSelectedDate(date);
+    navigate("/payment")
+  };
 
   const handleOnExited = () => {
     setExited(true);
   };
-  
+
   const handleSetDate = () => {
     setDateOpen(true);
     setOpen(false);
-  }
+  };
 
   const handleCloseSetDate = (_, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -43,7 +55,7 @@ export default function Schedule() {
   const handleOpen = () => {
     setOpen(true);
   };
-  
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -85,7 +97,7 @@ export default function Schedule() {
           Set Date
         </Button>
       </Stack>
-          
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -97,10 +109,15 @@ export default function Schedule() {
             Are you sure?
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Do you want to schedule it to {" "}
+            Do you want to schedule it to{" "}
             <strong>{selectedDate.format("DD MMMM YYYY")}</strong>
           </Typography>
-          <Stack direction="row" spacing={2} justifyContent="center" style={{marginTop: "20px"}}>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+            style={{ marginTop: "20px" }}
+          >
             <Button
               onClick={handleClose}
               variant="text"
@@ -109,7 +126,9 @@ export default function Schedule() {
               Cancel
             </Button>
             <Button
-              onClick={()=>{navigate('/payment')}}
+              onClick={() => {
+                handleDateClick(selectedDate);
+              }}
               variant="contained"
               style={{ color: "white", backgroundColor: "#797EF6" }}
             >
@@ -138,12 +157,17 @@ export default function Schedule() {
             <SnackbarContent
               style={{
                 transform: positioningStyles[status],
-                transition: 'transform 300ms ease',
+                transition: "transform 300ms ease",
               }}
               ref={nodeRef}
             >
-              <div className="snackbar-title">Date set at {selectedDate.format("DD MMMM YYYY")}</div>
-              <Close onClick={handleCloseSetDate} className="snackbar-close-icon" />
+              <div className="snackbar-title font-medium">
+                You cannot select a past date
+              </div>
+              <Close
+                onClick={handleCloseSetDate}
+                className="snackbar-close-icon"
+              />
             </SnackbarContent>
           )}
         </Transition>
@@ -153,25 +177,25 @@ export default function Schedule() {
 }
 
 const blue = {
-  200: '#99CCF3',
-  300: '#66B2FF',
-  400: '#3399FF',
-  500: '#007FFF',
-  600: '#0072E5',
-  700: '#0066CC',
+  200: "#99CCF3",
+  300: "#66B2FF",
+  400: "#3399FF",
+  500: "#007FFF",
+  600: "#0072E5",
+  700: "#0066CC",
 };
 
 const grey = {
-  50: '#F3F6F9',
-  100: '#E5EAF2',
-  200: '#DAE2ED',
-  300: '#C7D0DD',
-  400: '#B0B8C4',
-  500: '#9DA8B7',
-  600: '#6B7A90',
-  700: '#434D5B',
-  800: '#303740',
-  900: '#1C2025',
+  50: "#F3F6F9",
+  100: "#E5EAF2",
+  200: "#DAE2ED",
+  300: "#C7D0DD",
+  400: "#B0B8C4",
+  500: "#9DA8B7",
+  600: "#6B7A90",
+  700: "#434D5B",
+  800: "#303740",
+  900: "#1C2025",
 };
 
 const StyledSnackbar = styled(Snackbar)`
@@ -182,7 +206,7 @@ const StyledSnackbar = styled(Snackbar)`
   right: 16px;
 `;
 
-const SnackbarContent = styled('div')(
+const SnackbarContent = styled("div")(
   ({ theme }) => `
   position: relative;
   overflow: hidden;
@@ -192,16 +216,16 @@ const SnackbarContent = styled('div')(
   justify-content: space-between;
   max-width: 560px;
   min-width: 300px;
-  background-color: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+  background-color: ${theme.palette.mode === "dark" ? grey[900] : "#fff"};
   border-radius: 8px;
-  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
+  border: 1px solid ${theme.palette.mode === "dark" ? grey[700] : grey[200]};
   box-shadow: ${
-    theme.palette.mode === 'dark'
+    theme.palette.mode === "dark"
       ? `0 2px 8px rgb(0 0 0 / 0.5)`
       : `0 2px 8px ${grey[200]}`
   };
   padding: 0.75rem;
-  color: ${theme.palette.mode === 'dark' ? grey[50] : grey[900]};
+  color: ${theme.palette.mode === "dark" ? grey[50] : grey[900]};
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
 
@@ -218,15 +242,15 @@ const SnackbarContent = styled('div')(
     align-items: center;
     justify-content: center;
   }
-  `,
+  `
 );
 
 const positioningStyles = {
-  entering: 'translateX(0)',
-  entered: 'translateX(0)',
-  exiting: 'translateX(500px)',
-  exited: 'translateX(500px)',
-  unmounted: 'translateX(500px)',
+  entering: "translateX(0)",
+  entered: "translateX(0)",
+  exiting: "translateX(500px)",
+  exited: "translateX(500px)",
+  unmounted: "translateX(500px)",
 };
 
 const style = {
