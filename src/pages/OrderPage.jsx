@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { LocationOn } from "@mui/icons-material/";
 import { Button, Stack, Modal, Box, Typography } from "@mui/material/";
 import { useState } from "react";
 import shop_1 from "../assets/shop_1.png";

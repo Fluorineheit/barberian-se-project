@@ -660,6 +660,10 @@ video {
   margin-top: 2.5rem;
 }
 
+#root :is(.mt-2) {
+  margin-top: 0.5rem;
+}
+
 #root :is(.mt-4) {
   margin-top: 1rem;
 }
@@ -786,6 +790,10 @@ video {
   justify-content: center;
 }
 
+#root :is(.justify-between) {
+  justify-content: space-between;
+}
+
 #root :is(.gap-2) {
   gap: 0.5rem;
 }
@@ -830,6 +838,10 @@ video {
   border-width: 0px;
 }
 
+#root :is(.border-2) {
+  border-width: 2px;
+}
+
 #root :is(.border-b-2) {
   border-bottom-width: 2px;
 }
@@ -840,6 +852,11 @@ video {
 
 #root :is(.border-t-2) {
   border-top-width: 2px;
+}
+
+#root :is(.border-\[\#797EF6\]) {
+  --tw-border-opacity: 1;
+  border-color: rgb(121 126 246 / var(--tw-border-opacity));
 }
 
 #root :is(.border-gray-200) {

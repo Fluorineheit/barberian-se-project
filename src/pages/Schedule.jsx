@@ -109,7 +109,7 @@ export default function Schedule() {
               Cancel
             </Button>
             <Button
-              onClick={handleSetDate}
+              onClick={()=>{navigate('/payment')}}
               variant="contained"
               style={{ color: "white", backgroundColor: "#797EF6" }}
             >

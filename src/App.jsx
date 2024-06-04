@@ -23,6 +23,7 @@ import BookingWomen from './pages/BookingWomen'
 import BookingWomenColor from './pages/BookingWomenColor'
 import BookingCutMen from './pages/BookingCutMen'
 import BookingWomenCare from './pages/BookingWomenCare'
+import Payment from './pages/Payment'
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path='/favorite' element={<UserFavorites/>}></Route>
         <Route path='/your-reviews' element={<UserReviews/>}></Route>
         <Route path='/order-history' element={<OrderHistory/>}></Route>
+        <Route path='/payment' element={<Payment/>}></Route>
       </Routes>
     </Router>
     </>
