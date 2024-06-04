@@ -878,11 +878,6 @@ video {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
-#root :is(.border-red-500) {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
 #root :is(.bg-\[\#797EF6\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(121 126 246 / var(--tw-bg-opacity));
