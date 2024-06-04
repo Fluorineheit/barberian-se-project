@@ -14,7 +14,7 @@ import model_male_3 from "../assets/model_male_3.png";
 export default function Home() {
   return (
     <div className="container">
-      <p className="text-3xl font-semibold mb-4">Hai user</p>
+      <p className="text-3xl font-semibold mb-4">Hi! Yvette</p>
       <p>
         You look so good today, but we'll make it even cooler! What do you want
         to do?

@@ -87,7 +87,7 @@ export default function Payment() {
 
           <div
             className={`flex flex-row p-2 contained rounded-xl justify-between border-2 ${
-              selectedBank === "BCA" ? "border-[#797EF6]" : "border-blue-500"
+              selectedBank === "BCA" ? "border-[#797EF6] border-4" : "border-blue-500"
             } text-black normal-case`}
             onClick={() => handleBankSelect("BCA")}
           >
@@ -99,11 +99,11 @@ export default function Payment() {
 
           <div
             className={`flex flex-row p-2 contained rounded-xl justify-between border-2 ${
-              selectedBank === "BRI" ? "border-[#797EF6]" : "border-blue-500"
+              selectedBank === "BRI" ? "border-[#797EF6] border-4" : "border-blue-500"
             } text-black normal-case`}
             onClick={() => handleBankSelect("BRI")}
           >
-            <div className="bg-white grid rounded-md  items-center justify-center">
+            <div className="bg-white grid rounded-md items-center justify-center">
               BRI
             </div>
             <img src={bri} alt="BRI" />
@@ -111,7 +111,7 @@ export default function Payment() {
 
           <div
             className={`flex flex-row p-2 contained rounded-xl justify-between border-2 ${
-              selectedBank === "BNI" ? "border-[#797EF6]" : "border-blue-500"
+              selectedBank === "BNI" ? "border-[#797EF6] border-4" : "border-blue-500"
             } text-black normal-case`}
             onClick={() => handleBankSelect("BNI")}
           >
